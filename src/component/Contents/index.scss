@@ -1,7 +1,9 @@
 .contents_block {
-    height: 100%;
-    width: 100%;
+    width: 960px;
+    margin: auto;
+    margin-top: 32px; 
+    margin-bottom: 32px; 
     display: grid;
-    grid-auto-rows: 100px;
-    grid-auto-columns: 120px;
+    grid-template-columns: repeat(8, 120px);
+    grid-template-rows: repeat(20, 100px);
 }
