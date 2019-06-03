@@ -1,10 +1,10 @@
 import React from 'react';
+import Product from './Product';
 import styles from './index.scss';
 
 const Content = (props) => {
 
   const { displayData, } = props;
-  const { gridIndex, } = displayData;
 
   const getDisplayStyle = () => {
     switch (displayData.type) {
@@ -19,14 +19,26 @@ const Content = (props) => {
     }
   };
 
-  return (
-    <div
-      className={getDisplayStyle()}
-      style={{
-        gridArea: `${gridIndex.rowStart}/${gridIndex.columnStart}/${gridIndex.rowEnd}/${gridIndex.columnEnd}`,
-      }}
-    />
-  );
+  const getDisplayBlock = () => {
+    const { gridIndex, } = displayData;
+
+    switch (displayData.type) {
+      case 'product':
+        return <Product displayData={displayData} />;
+      default:
+        return (
+          <div
+            className={getDisplayStyle()}
+            style={{
+              gridArea: `${gridIndex.rowStart}/${gridIndex.columnStart}/${gridIndex.rowEnd}/${gridIndex.columnEnd}`,
+              zIndex: displayData.zIndex,
+            }}
+          />
+        );
+    }
+  };
+
+  return getDisplayBlock();
 };
 
 export default Content;
