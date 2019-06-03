@@ -14,6 +14,12 @@ const falseData = [
     gridIndex: {
       rowStart: '3', rowEnd: '4', columnStart: '5', columnEnd: '7',
     },
+  },
+  {
+    type: 'line',
+    gridIndex: {
+      rowStart: '2', rowEnd: '4', columnStart: '1', columnEnd: '2',
+    },
   }
 ];
 

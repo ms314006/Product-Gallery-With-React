@@ -1,23 +1,32 @@
 import React from 'react';
-import Border from './Border';
-import Fill from './Fill';
+import styles from './index.scss';
 
 const Content = (props) => {
 
   const { displayData, } = props;
+  const { gridIndex, } = displayData;
 
-  const getDisplayData = () => {
+  const getDisplayStyle = () => {
     switch (displayData.type) {
       case 'border':
-        return <Border gridIndex={displayData.gridIndex} />;
+        return styles.border_style;
       case 'fill':
-        return <Fill gridIndex={displayData.gridIndex} />;
+        return styles.fill_style;
+      case 'line':
+        return styles.line_style;
       default:
         return null;
     }
   };
 
-  return getDisplayData();
+  return (
+    <div
+      className={getDisplayStyle()}
+      style={{
+        gridArea: `${gridIndex.rowStart}/${gridIndex.columnStart}/${gridIndex.rowEnd}/${gridIndex.columnEnd}`,
+      }}
+    />
+  );
 };
 
 export default Content;
