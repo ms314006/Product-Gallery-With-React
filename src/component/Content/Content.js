@@ -1,5 +1,6 @@
 import React from 'react';
 import Product from './Product';
+import Text from './Text';
 import styles from './index.scss';
 
 const Content = (props) => {
@@ -25,6 +26,8 @@ const Content = (props) => {
     switch (displayData.type) {
       case 'product':
         return <Product displayData={displayData} />;
+      case 'text':
+        return <Text displayData={displayData} />;
       default:
         return (
           <div

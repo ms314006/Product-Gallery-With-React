@@ -1,0 +1,48 @@
+.text_block {
+  position: relative;
+}
+
+.text_style {
+  position: absolute;
+  font-weight: bold;
+  font-size: 48px;
+  color: #000000;
+  line-height: 48px;
+}
+
+.text_style::before {
+  content: attr(text);
+  position: absolute;
+  color: rgba(0, 0, 0, 0.6);
+  top: -15px;
+  left: 0;
+  height: 22px;
+  overflow: hidden;
+}
+
+.text_style::after {
+  content: attr(text);
+  position: absolute;
+  color: rgba(0, 0, 0, 0.3);
+  top: -30px;
+  left: 0;
+  height: 22px;
+  overflow: hidden;
+}
+
+.page_style {
+  position: absolute;
+  font-weight: bold;
+  font-size: 48px;
+  color: #000000;
+  line-height: 48px;
+}
+
+.comment_style {
+  position: absolute;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 24px;
+  color: #000000;
+  line-height: 48px;
+}
