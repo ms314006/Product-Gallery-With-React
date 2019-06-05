@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss|sass|less)$": "identity-obj-proxy"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test-cover": "jest --coverage"
   },
   "keywords": [],
   "author": "",
