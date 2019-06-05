@@ -30,6 +30,11 @@
   overflow: hidden;
 }
 
+.minor_title_style {
+  font-size: 24px;
+  font-weight: 'bold';
+}
+
 .page_style {
   position: absolute;
   font-weight: bold;
@@ -45,4 +50,9 @@
   font-size: 24px;
   color: #000000;
   line-height: 48px;
+}
+
+.describe_style {
+  font-size: 16px;
+  line-height: 24px;
 }

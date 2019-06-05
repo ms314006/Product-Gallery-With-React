@@ -9,10 +9,14 @@ const Text = (props) => {
     switch (kind) {
       case 'title':
         return styles.text_style;
+      case 'minorTitle':
+        return styles.minor_title_style;
       case 'page':
         return styles.page_style;
       case 'comment':
         return styles.comment_style;
+      case 'describe':
+        return styles.describe_style;
       default:
         return null;
     }
