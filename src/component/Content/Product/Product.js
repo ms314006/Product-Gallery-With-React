@@ -15,7 +15,7 @@ const Product = (props) => {
         zIndex: displayData.zIndex,
       }}
     >
-      <Link to="productList" style={{ display: 'block', height: '100%', width: '100%', }} />
+      <Link to="productImformation" style={{ display: 'block', height: '100%', width: '100%', }} />
     </div>
   );
 };
