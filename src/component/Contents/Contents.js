@@ -44,16 +44,18 @@ const ProductImformation = (props) => {
 
 const Contents = () => (
   <HashRouter>
-    <div className={styles.contents_block}>
-      <Switch>
-        <Route exact path="/">
+    <Switch>
+      <Route exact path="/">
+        <div className={styles.contents_block} data-testid="productContentBlock">
           <ProductList data={pageData} />
-        </Route>
-        <Route path="/productImformation">
+        </div>
+      </Route>
+      <Route path="/productImformation">
+        <div className={styles.contents_block} data-testid="productImformationBlock">
           <ProductImformation data={imformationData} />
-        </Route>
-      </Switch>
-    </div>
+        </div>
+      </Route>
+    </Switch>
   </HashRouter>
 );
 
