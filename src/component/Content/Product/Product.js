@@ -14,8 +14,13 @@ const Product = (props) => {
         gridArea: `${gridIndex.rowStart}/${gridIndex.columnStart}/${gridIndex.rowEnd}/${gridIndex.columnEnd}`,
         zIndex: displayData.zIndex,
       }}
+      data-testid="productBlock"
     >
-      <Link to="productImformation" style={{ display: 'block', height: '100%', width: '100%', }} />
+      <Link
+        to="productImformation"
+        style={{ display: 'block', height: '100%', width: '100%', }}
+        data-testid="productLink"
+      />
     </div>
   );
 };
