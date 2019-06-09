@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   HashRouter,
   Switch,
@@ -24,6 +25,14 @@ const ProductList = (props) => {
   );
 };
 
+ProductList.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.shape({})),
+};
+
+ProductList.defaultProps = {
+  data: [],
+};
+
 const ProductImformation = (props) => {
   const { data, } = props;
   return (
@@ -40,6 +49,14 @@ const ProductImformation = (props) => {
       }
     </>
   );
+};
+
+ProductImformation.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.shape({})),
+};
+
+ProductImformation.defaultProps = {
+  data: [],
 };
 
 const Contents = () => (

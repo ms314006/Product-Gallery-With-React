@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './index.scss';
 
 const Text = (props) => {
@@ -40,6 +41,14 @@ const Text = (props) => {
       </div>
     </div>
   );
+};
+
+Text.propTypes = {
+  displayData: PropTypes.shape({}),
+};
+
+Text.defaultProps = {
+  displayData: {},
 };
 
 export default Text;
